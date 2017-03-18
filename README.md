@@ -19,7 +19,7 @@ add configuration to your application.yml
 ```yaml
 auto:
   swagger2:
-    env: qa
+    env: qa, uat
     host: http://localhost:8080
     enable: true
     basePackage: com

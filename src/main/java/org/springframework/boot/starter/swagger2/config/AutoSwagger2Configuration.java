@@ -31,7 +31,6 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Configuration
-@Conditional(AutoSwagger2Condition.class)
 @EnableSwagger2
 @EnableConfigurationProperties(AutoSwagger2Properties.class)
 public class AutoSwagger2Configuration {
@@ -40,6 +39,7 @@ public class AutoSwagger2Configuration {
 	private AutoSwagger2Properties autoSwagger2Properties;
 
 	@Bean
+	@Conditional(AutoSwagger2Condition.class)
 	@ConditionalOnMissingBean(Docket.class)
 	public Docket createRestApi() {
 		ApiInfo apiInfo = new ApiInfoBuilder().title(autoSwagger2Properties.getApiInfo().getTitle())
