@@ -12,10 +12,26 @@ public class AutoSwagger2Properties {
 	private List<String> protocols = newArrayList();
 	private String host;
 	private boolean enable = true;
-	private List<String> paths;
+	private Paths paths;
 	private String basePackage = "";
 	private ApiInfo apiInfo;
 
+	public static class Paths {
+		private List<String> or;
+		private List<String> not;
+		public List<String> getOr() {
+			return or;
+		}
+		public void setOr(List<String> or) {
+			this.or = or;
+		}
+		public List<String> getNot() {
+			return not;
+		}
+		public void setNot(List<String> not) {
+			this.not = not;
+		}
+	}
 	public static class ApiInfo {
 		private String version = "1.0-SNAPSHOT";
 		private String title = "Api Documentation";
@@ -116,7 +132,7 @@ public class AutoSwagger2Properties {
 		return host;
 	}
 
-	public List<String> getPaths() {
+	public Paths getPaths() {
 		return paths;
 	}
 
@@ -144,7 +160,7 @@ public class AutoSwagger2Properties {
 		this.enable = enable;
 	}
 
-	public void setPaths(List<String> paths) {
+	public void setPaths(Paths paths) {
 		this.paths = paths;
 	}
 

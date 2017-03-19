@@ -51,20 +51,26 @@ public class AutoSwagger2Configuration {
 				.version(autoSwagger2Properties.getApiInfo().getVersion())
 				.license(autoSwagger2Properties.getApiInfo().getLicense())
 				.licenseUrl(autoSwagger2Properties.getApiInfo().getLicenseUrl()).build();
-		return new Docket(DocumentationType.SWAGGER_2)
-				.host(autoSwagger2Properties.getHost())
-				.protocols(newHashSet(autoSwagger2Properties.getProtocols()))
-				.enable(autoSwagger2Properties.isEnable())
-				.apiInfo(apiInfo).select()
-				.apis(not(withMethodAnnotation(IgnoreMethod.class)))
+		return new Docket(DocumentationType.SWAGGER_2).host(autoSwagger2Properties.getHost())
+				.protocols(newHashSet(autoSwagger2Properties.getProtocols())).enable(autoSwagger2Properties.isEnable())
+				.apiInfo(apiInfo).select().apis(not(withMethodAnnotation(IgnoreMethod.class)))
 				.apis(RequestHandlerSelectors.basePackage(autoSwagger2Properties.getBasePackage()))
-				.paths(CollectionUtils.isEmpty(autoSwagger2Properties.getPaths()) ? PathSelectors.any()
-						: or(map2list(autoSwagger2Properties.getPaths(), new Function<String, Predicate<String>>() {
-							@Override
-							public Predicate<String> apply(String path) {
-								return regex(path);
-							}
-						})))
+				.paths(CollectionUtils.isEmpty(autoSwagger2Properties.getPaths().getOr()) ? PathSelectors.any()
+						: or(map2list(autoSwagger2Properties.getPaths().getOr(),
+								new Function<String, Predicate<String>>() {
+									@Override
+									public Predicate<String> apply(String path) {
+										return regex(path);
+									}
+								})))
+				.paths(CollectionUtils.isEmpty(autoSwagger2Properties.getPaths().getNot()) ? PathSelectors.any()
+						: and(map2list(autoSwagger2Properties.getPaths().getNot(),
+								new Function<String, Predicate<String>>() {
+									@Override
+									public Predicate<String> apply(String path) {
+										return not(regex(path));
+									}
+								})))
 				.build();
 
 	}

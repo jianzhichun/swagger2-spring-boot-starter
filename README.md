@@ -24,8 +24,11 @@ auto:
     enable: true
     basePackage: com
     path:
+      or: 
         - /hello
         - /helloworld
+      not:
+        - /error 
     apiInfo:
       version: 2.0
       title: test
