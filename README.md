@@ -3,7 +3,7 @@ spring-boot-starter-swagger2 used to auto-configure swagger2 in spring boot proj
 
 ## quick-start
 
-add below poms to your pom
+add below dependencies to your pom
 ```xml
     <dependency>
         <groupId>org.springframework.boot</groupId>
