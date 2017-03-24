@@ -10,9 +10,9 @@ add below dependencies to your pom
         <artifactId>spring-boot-starter-web</artifactId>
     </dependency>
     <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-swagger2</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <groupId>io.github.jianzhichun</groupId>
+	    <artifactId>spring-boot-starter-swagger2</artifactId>
+	    <version>0.0.1</version>
     </dependency>
 ```
 add configuration to your application.yml
