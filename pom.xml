@@ -4,7 +4,7 @@
 
 	<groupId>io.github.jianzhichun</groupId>
 	<artifactId>spring-boot-starter-swagger2</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<name>spring-boot-starter-swagger2</name>
 	<description>spring-boot-starter-swagger2 used to auto-configure swagger2 in spring boot project</description>
