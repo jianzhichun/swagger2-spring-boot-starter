@@ -1,16 +1,18 @@
-package org.springframework.boot.starter.swagger2.config;
+package io.github.jianzhichun.springboot.starters.swagger2.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.starter.swagger2.IgnoreMethod;
-import org.springframework.boot.starter.swagger2.condition.AutoSwagger2Condition;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.CollectionUtils;
 
 import com.google.common.base.Predicate;
+
+import io.github.jianzhichun.springboot.starters.swagger2.IgnoreMethod;
+import io.github.jianzhichun.springboot.starters.swagger2.condition.AutoSwagger2Condition;
+
 import static com.google.common.collect.Sets.*;
 
 import springfox.documentation.builders.ApiInfoBuilder;
@@ -41,7 +43,7 @@ public class AutoSwagger2Configuration {
 	@Bean
 	@Conditional(AutoSwagger2Condition.class)
 	@ConditionalOnMissingBean(Docket.class)
-	public Docket createRestApi() {
+	public Docket docket() {
 		ApiInfo apiInfo = new ApiInfoBuilder().title(autoSwagger2Properties.getApiInfo().getTitle())
 				.description(autoSwagger2Properties.getApiInfo().getDescription())
 				.termsOfServiceUrl(autoSwagger2Properties.getApiInfo().getTermsOfServiceUrl())

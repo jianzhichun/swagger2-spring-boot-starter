@@ -1,4 +1,4 @@
-package org.springframework.boot.starter.swagger2.config;
+package io.github.jianzhichun.springboot.starters.swagger2.config;
 
 import java.util.List;
 

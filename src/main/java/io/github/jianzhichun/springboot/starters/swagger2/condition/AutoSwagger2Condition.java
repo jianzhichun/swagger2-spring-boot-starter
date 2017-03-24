@@ -1,4 +1,4 @@
-package org.springframework.boot.starter.swagger2.condition;
+package io.github.jianzhichun.springboot.starters.swagger2.condition;
 
 import org.springframework.context.annotation.Condition;
 import org.springframework.context.annotation.ConditionContext;
@@ -12,6 +12,11 @@ import static org.springframework.util.StringUtils.*;
 
 import java.util.Set;
 
+/**
+ * 
+ * @author chun
+ *
+ */
 public class AutoSwagger2Condition implements Condition {
 
 	@Override
