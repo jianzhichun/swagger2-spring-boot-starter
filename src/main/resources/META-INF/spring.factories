@@ -1,1 +1,1 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=org.springframework.boot.starter.swagger2.config.AutoSwagger2Configuration
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=io.github.jianzhichun.springboot.starters.swagger2.config.AutoSwagger2Configuration
