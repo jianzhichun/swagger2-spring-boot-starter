@@ -3,12 +3,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>io.github.jianzhichun</groupId>
-	<artifactId>spring-boot-starter-swagger2</artifactId>
+	<artifactId>swagger2-spring-boot-starter</artifactId>
 	<version>0.0.1</version>
 
-	<name>spring-boot-starter-swagger2</name>
-	<description>spring-boot-starter-swagger2 used to auto-configure swagger2 in spring boot project</description>
-	<url>https://github.com/jianzhichun/spring-boot-starter-swagger2</url>
+	<name>swagger2-spring-boot-starter</name>
+	<description>swagger2-spring-boot-starter used to auto-configure swagger2 in spring boot project</description>
+	<url>https://github.com/jianzhichun/swagger2-spring-boot-starter</url>
 
 	<inceptionYear>2017</inceptionYear>
 
@@ -31,12 +31,12 @@
 
 	<scm>
 		<connection>
-         scm:git:https://github.com/jianzhichun/spring-boot-starter-swagger2.git
+         scm:git:https://github.com/jianzhichun/swagger2-spring-boot-starter.git
       	</connection>
 		<developerConnection>
-         scm:https://github.com/jianzhichun/spring-boot-starter-swagger2.git
+         scm:https://github.com/jianzhichun/swagger2-spring-boot-starter.git
       	</developerConnection>
-		<url>https://github.com/jianzhichun/spring-boot-starter-swagger2</url>
+		<url>https://github.com/jianzhichun/swagger2-spring-boot-starter</url>
 	</scm>
 
 	<developers>
