@@ -1,5 +1,5 @@
-# spring-boot-starter-swagger2
-spring-boot-starter-swagger2 used to auto-configure swagger2 in spring boot project
+# swagger2-spring-boot-starter
+swagger2-spring-boot-starter used to auto-configure swagger2 in spring boot project
 
 ## quick-start
 
@@ -11,7 +11,7 @@ add below dependencies to your pom
     </dependency>
     <dependency>
         <groupId>io.github.jianzhichun</groupId>
-	<artifactId>spring-boot-starter-swagger2</artifactId>
+	<artifactId>swagger2-spring-boot-starter</artifactId>
 	<version>0.0.1</version>
     </dependency>
 ```
