@@ -10,11 +10,11 @@ import static com.google.common.collect.Lists.*;
 public class AutoSwagger2Properties {
 
 	private List<String> protocols = newArrayList();
-	private String host;
+	private String host = "";
 	private boolean enable = true;
-	private Paths paths;
+	private Paths paths = new Paths();
 	private String basePackage = "";
-	private ApiInfo apiInfo;
+	private ApiInfo apiInfo = new ApiInfo();
 
 	public static class Paths {
 		private List<String> or;
@@ -39,7 +39,7 @@ public class AutoSwagger2Properties {
 		private String termsOfServiceUrl = "urn:tos";
 		private String license = "Apache 2.0";
 		private String licenseUrl = "http://www.apache.org/licenses/LICENSE-2.0";
-		private Contact contact;
+		private Contact contact = new Contact();
 
 		public static class Contact {
 			private String name = "";

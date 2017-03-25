@@ -11,8 +11,8 @@ add below dependencies to your pom
     </dependency>
     <dependency>
         <groupId>io.github.jianzhichun</groupId>
-	<artifactId>swagger2-spring-boot-starter</artifactId>
-	<version>0.0.1</version>
+        <artifactId>swagger2-spring-boot-starter</artifactId>
+        <version>0.1.0</version>
     </dependency>
 ```
 add configuration to your application.yml
@@ -23,10 +23,9 @@ auto:
     host: http://localhost:8080
     enable: true
     basePackage: com
-    path:
+    paths:
       or: 
-        - /hello
-        - /helloworld
+        - /.*
       not:
         - /error 
     apiInfo:
