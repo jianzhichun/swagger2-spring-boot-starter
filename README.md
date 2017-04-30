@@ -12,7 +12,7 @@ add below dependencies to your pom
     <dependency>
         <groupId>io.github.jianzhichun</groupId>
         <artifactId>swagger2-spring-boot-starter</artifactId>
-        <version>0.1.1</version>
+        <version>0.1.2</version>
     </dependency>
 ```
 add configuration to your application.yml
