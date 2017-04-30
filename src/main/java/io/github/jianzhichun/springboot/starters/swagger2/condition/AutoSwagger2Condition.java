@@ -21,17 +21,15 @@ public class AutoSwagger2Condition implements Condition {
 
 	@Override
 	public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
-		String profiles = context.getEnvironment().getProperty("spring.profiles.active");
-		String env = context.getEnvironment().getProperty("auto.swagger2.env");
-		if (isEmpty(env)) {
+		String profilestr = context.getEnvironment().getProperty("spring.profiles.active");
+		String envstr = context.getEnvironment().getProperty("auto.swagger2.env");
+		if (isEmpty(envstr) || isEmpty(profilestr)) {
 			return true;
 		}
-		Set<String> envs = newHashSet(Splitter.on(",").trimResults().omitEmptyStrings().split(env));
-
-		if (envs.size() > 1) {
-			return envs.contains(profiles);
-		}
-		return profiles.contains(env);
+		Set<String> envs = newHashSet(Splitter.on(",").trimResults().omitEmptyStrings().split(envstr));
+		Set<String> profiles = newHashSet(Splitter.on(",").trimResults().omitEmptyStrings().split(profilestr));
+		
+		return intersection(envs, profiles).size() > 0;
 	}
 
 }
